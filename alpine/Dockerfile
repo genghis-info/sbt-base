@@ -1,6 +1,6 @@
-ARG JDK_VERSION=11
+ARG JDK_VERSION=8
 
-FROM "openjdk:$JDK_VERSION-jdk-alpine"
+FROM "adoptopenjdk/openjdk$JDK_VERSION:alpine"
 
 ARG BUILD_DATE
 ARG VCS_REF
@@ -12,7 +12,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 
 RUN apk add --no-cache bash
 
-ARG SBT_VERSION=1.2.8
+ARG SBT_VERSION=1.3.13
 RUN wget -qO - "https://github.com/sbt/sbt/releases/download/v$SBT_VERSION/sbt-$SBT_VERSION.tgz" | tar xz -C /usr/share && \
     chown -R root:root /usr/share/sbt && \
     chmod -R 755 /usr/share/sbt && \

@@ -1,20 +1,25 @@
 # SBT-BASE
 
 ![Docker Automated build](https://img.shields.io/docker/automated/yangcheng2503/sbt-base)
+![Docker Image Size (latest semver)](https://img.shields.io/docker/image-size/yangcheng2503/sbt-base?sort=date)
 ![Docker Pulls](https://img.shields.io/docker/pulls/yangcheng2503/sbt-base)
 
 A series of personal sbt docker images for Scala.
 
-Based on [OpenJDK images](https://hub.docker.com/_/openjdk). Support 2 kinds of base OS: Debian and Alpine
+Based on [adoptopenjdk](https://hub.docker.com/u/adoptopenjdk) images. Support 2 kinds of base OS: Ubuntu and Alpine
 
 Using [Label Schema](http://label-schema.org/) to provide metadata for images.
 
 ## Availiable Tags
 
-- **1.2.8-jdk8**: sbt version 1.2.8, with the latest Openjdk8, based on Debian.
+- **1.2.8-jdk8**: sbt version 1.2.8, with the latest Openjdk8, based on Ubuntu.
 - **1.2.8-jdk8-alpine**:  sbt version 1.2.8, with the latest Openjdk8, base on Alpine.
-- **1.2.8-jdk11**: sbt version 1.2.8, with the latest Openjdk11, based on Debian.
+- **1.2.8-jdk11**: sbt version 1.2.8, with the latest Openjdk11, based on Ubuntu.
 - **1.2.8-jdk11-alpine**:  sbt version 1.2.8, with the latest Openjdk11, base on Alpine.
+- **1.3.13-jdk8**: sbt version 1.3.13, with the latest Openjdk8, based on Ubuntu.
+- **1.3.13-jdk8-alpine**:  sbt version 1.3.13, with the latest Openjdk8, base on Alpine.
+- **1.3.13-jdk11**: sbt version 1.3.13, with the latest Openjdk11, based on Ubuntu.
+- **1.3.13-jdk11-alpine**:  sbt version 1.3.13, with the latest Openjdk11, base on Alpine.
 
 ## Auto Build
 
@@ -32,10 +37,10 @@ Using hooks to give some dynamic parameters when building. Like `org.label-schem
 
 _FYI: You can ignore the `--build-arg` if you don't care about labels._
 
-For Debian image:
+For Ubuntu image:
 
 ```shell
-    $> docker build --build-arg VCS_REF=<COMMIT_HASH> --build-arg BUILD_DATE=<RFC3339_TIME> ./debian
+    $> docker build --build-arg VCS_REF=<COMMIT_HASH> --build-arg BUILD_DATE=<RFC3339_TIME> ./ubuntu
 ```
 
 For Alpine image:
