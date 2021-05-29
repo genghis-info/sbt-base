@@ -1,4 +1,4 @@
-ARG JDK_VERSION=11
+ARG JDK_VERSION=8
 
 FROM "adoptopenjdk/openjdk$JDK_VERSION:alpine"
 
