@@ -10,7 +10,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.vendor="Genghis Info" \
       org.label-schema.schema-version="1.0.0-rc1"
 
-ARG SBT_VERSION=1.3.13
+ARG SBT_VERSION=1.2.8
 RUN curl -fsL "https://github.com/sbt/sbt/releases/download/v$SBT_VERSION/sbt-$SBT_VERSION.tgz" | tar xfz - -C /usr/share && \
     chown -R root:root /usr/share/sbt && \
     chmod -R 755 /usr/share/sbt && \
