@@ -1,20 +1,40 @@
 # SBT-BASE
 
-[![](https://images.microbadger.com/badges/image/yangcheng2503/sbt-base.svg)](https://microbadger.com/images/yangcheng2503/sbt-base "Get your own image badge on microbadger.com")
-[![](https://images.microbadger.com/badges/version/yangcheng2503/sbt-base.svg)](https://microbadger.com/images/yangcheng2503/sbt-base "Get your own version badge on microbadger.com")
+A series of personal sbt docker images for Scala.
 
-A personal sbt docker image for Scala.
-Based on Alpine Linux which makes our image as smalles as possible. 
-Using JRE instead of JDK to reduce image size and safety risk.
+Based on [OpenJDK images](https://hub.docker.com/_/openjdk). Support 2 kinds of base OS: Debian and Alpine
 
-## Requirement
+Using [Label Schema](http://label-schema.org/) to provide metadata for images.
+
+## Availiable Tags
+
+- **1.2.8-jdk8**: sbt version 1.2.8, with the latest Openjdk8, based on Debian.
+- **1.2.8-jdk8-alpine**:  sbt version 1.2.8, with the latest Openjdk8, base on Alpine.
+
+## Auto Build
+
+This repo has been linked with Docker Hub, so will be built if any changes commit.
+
+Using hooks to give some dynamic parameters when building. Like `org.label-schema.build-date` and `org.label-schema.vcs-ref`.
+
+## Local Build
+
+#### Requirement
 
 - Docker has been installed.
 
-## Usage:
+#### Build command:
 
-Run following command to build the image.
+_FYI: You can ignore the `--build-arg` if you don't care about labels._
+
+For Debian image:
 
 ```shell
-    $> docker build .
+    $> docker build --build-arg VCS_REF=<COMMIT_HASH> --build-arg BUILD_DATE=<RFC3339_TIME> ./debian
+```
+
+For Alpine image:
+
+```shell
+    $> docker build --build-arg VCS_REF=<COMMIT_HASH> --build-arg BUILD_DATE=<RFC3339_TIME> ./alpine
 ```
