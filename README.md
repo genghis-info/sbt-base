@@ -4,7 +4,7 @@
 ![Docker Image Size (latest)](https://img.shields.io/docker/image-size/yangcheng2503/sbt-base/latest)
 ![Docker Pulls](https://img.shields.io/docker/pulls/yangcheng2503/sbt-base)
 
-A series of personal sbt docker images for Scala.
+A series of personal sbt docker images for Scala. Docker hub link: https://hub.docker.com/r/yangcheng2503/sbt-base
 
 Based on [adoptopenjdk](https://hub.docker.com/u/adoptopenjdk) images. Support 2 kinds of base OS: Ubuntu and Alpine
 
@@ -51,16 +51,16 @@ Using hooks to give some dynamic parameters when building. Like `org.label-schem
 
 #### Build command:
 
-_FYI: You can ignore the `--build-arg` if you don't care about labels._
+_FYI: You can skip the `--build-arg` if you don't care about labels._
 
 For Ubuntu image:
 
 ```shell
-    $> docker build --build-arg VCS_REF=<COMMIT_HASH> --build-arg BUILD_DATE=<RFC3339_TIME> ./ubuntu
+    $ docker build --build-arg VCS_REF=<COMMIT_HASH> --build-arg BUILD_DATE=<RFC3339_TIME> ./ubuntu
 ```
 
 For Alpine image:
 
 ```shell
-    $> docker build --build-arg VCS_REF=<COMMIT_HASH> --build-arg BUILD_DATE=<RFC3339_TIME> ./alpine
+    $ docker build --build-arg VCS_REF=<COMMIT_HASH> --build-arg BUILD_DATE=<RFC3339_TIME> ./alpine
 ```
