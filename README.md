@@ -16,7 +16,7 @@ Using [Label Schema](http://label-schema.org/) to provide metadata for images.
 
 _FYI: Please don't use sbt lower than 1.5.1 anymore! Since bintray has shutdown, previous sbt versions cannot fetch required libraries from bintray._
 
-- **latest**: the latest sbt, with the latest Openjdk11, based on Ubuntu.
+- **latest**: the latest sbt (1.5.4), with the latest Openjdk11, based on Ubuntu.
 - **alpine**: the latest sbt, with the latest Openjdk11, base on Alpine.
 - **graalvm**: the latest sbt, with the graalvm-ce 21.1.0, Java 11. Based on Oracle Linux 8.
 - **1.5.2-jdk11**: sbt version 1.5.2, with the latest Openjdk11, based on Ubuntu.

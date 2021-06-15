@@ -35,7 +35,7 @@ RUN curl -L -o zlib.tar.gz https://zlib.net/zlib-${ZLIB_VERSION}.tar.gz && \
 #END PRE-REQUISITES FOR STATIC NATIVE IMAGES FOR GRAAL
 
 # Install sbt
-ARG SBT_VERSION=1.5.3
+ARG SBT_VERSION=1.5.4
 RUN curl -fsL "https://github.com/sbt/sbt/releases/download/v${SBT_VERSION}/sbt-${SBT_VERSION}.tgz" | tar xfz - -C /usr/share && \
     chown -R root:root /usr/share/sbt && \
     chmod -R 755 /usr/share/sbt && \
